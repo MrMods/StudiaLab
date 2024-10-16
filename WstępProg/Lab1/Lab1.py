@@ -162,7 +162,7 @@ def kalkulator(x,y):
     print (f"Wyniki:\n Dodawanie: {dodawanie}\n Odejmowanie: {odejmowanie}\n Mnożenie: {mnozenie}\n Dzielenie: {dzielenie}\n Potęgowanie: {potegowanie}")
 
 
-kalkulator(input("Podaj pierwszą liczbę: "),input("Podaj drugą liczbę: "))      #Wprowadzenie zmiennych do funkcji kalkulator
+kalkulator(input("Podaj pierwszą liczbę: "),input("Podaj drugą liczbę: "))     #Wprowadzenie zmiennych do funkcji kalkulator
 
 '''
 Wyniki:
