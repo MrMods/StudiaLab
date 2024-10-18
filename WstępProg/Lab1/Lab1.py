@@ -58,10 +58,10 @@ print(uczelnia)
 #Studiuję na WSIiZ
 
 #Zad3
-imię = "Jan"
+imie = "Jan"
 wiek = 20
 wzrost = 178
-print("Nazywam się", imię, "i mam", wiek, "lat")
+print("Nazywam się", imie, "i mam", wiek, "lat")
 print("Mój wzrost to", wzrost, "cm")
 #Nazywam się Jan i mam 20 lat
 #Mój wzrost to 178 cm
@@ -73,8 +73,8 @@ rabat = 0.2
 
 zrabatem = cena - (cena * rabat)
 
-print(round(zrabatem,2))
-#31.99
+print(round(zrabatem,2), "PLN")
+#31.99 PLN
 
 #Zad5
 
@@ -95,28 +95,25 @@ Pole prostokąta: 6 Obwód prostokąta: 10
 
 #Zad6
 
-#droga = input("Podaj drogę pokonaną przez samochód: ")
+#droga = int(input("Podaj drogę pokonaną przez samochód: "))
 #cena = 6.5
 
 droga = random.randint(1,1000)                   #Losuje liczbe z przedziału
-spalanie = input("Podaj średne spalanie samochodu (l/100km): ")
-cena = input("Podaj aktualną cena paliwa za litr: ")
-zuzyciepaliwa = int(droga) / float(spalanie)            #Obliczanie zużycia paliwa
+spalanie = float(input("Podaj średne spalanie samochodu (l/100km): "))
+cena = float(input("Podaj aktualną cena paliwa za litr: "))
+zuzyciepaliwa = (droga / 100) * spalanie           #Obliczanie zużycia paliwa
 
 #print ("Przewidywanie zużycie paliwa: ", round(zuzyciepaliwa,2), "l.")
 #print ("Szacowane koszty podróży: ", round(zuzyciepaliwa * float(cena),2),"zł.")
 
 print(f"Przewidywanie zużycie paliwa: {round(zuzyciepaliwa,2)} l.")
-print(f"Szacowane koszty podróży: {round(zuzyciepaliwa * float(cena))} zł.")
+print(f"Szacowane koszty podróży: {round(zuzyciepaliwa * cena, 2)} zł.")
 
 #Zad 7
-def RownanieLinowe(x,y):
-    a = float(x)            #Zamiania str na float
-    b = float(y)            #Zamiania str na float
-
+def RownanieLinowe(a,b):
     #Sprawdzanie warunków dla rownania liniowego
     if a != 0:
-        x = round(-b/a,2)
+        x = round(-b/a,2)       #Obliczanie x dla rówania liniowego
         print(f"x = {x}")
     elif a == 0 and b != 0:
         print("Równanie sprzeczne")
@@ -124,34 +121,27 @@ def RownanieLinowe(x,y):
         print("Równanie tożsamościowe")
 
 
-RownanieLinowe(input("Podaj ax: "),input("Podaj b: "))  #Wprowadzanie zmiennych do funkcji RownanieLinowe
+RownanieLinowe(float(input("Podaj ax: ")),float(input("Podaj b: ")))  #Wprowadzanie zmiennych do funkcji RownanieLinowe
 
 #Zad8
-def RownanieKwadratowe(x,y,z):
-    a = float(x)            #Zamiania str na float
-    b = float(y)            #Zamiania str na float
-    c = float(z)            #Zamiania str na float
-
+def RownanieKwadratowe(a,b,c):
     delta = (b**2) - (4*a*c)        #Obliczanie delty
 
    #Sprawdzanie warunków dla równania kwadratowego
     if delta > 0:
-        x1 = (-b - delta**(1/2)) / (2*a)
+        x1 = (-b - delta**(1/2)) / (2*a)                #Obliczanie x1, x2 ze wzoru
         x2 = (-b + delta**(1/2)) / (2*a)
         print (f"x1 = {x1} x2 = {x2}")
     elif delta == 0:
-        x1 = -b / (2*a)
+        x1 = -b / (2*a)                                 #Oblicznie x1
         print(f"x = {x1}")
     else:
         print("Brak rozwiązań")
 
-RownanieKwadratowe(input("Podaj a: "), input("Podaj b: "), input("Podaj c: "))           #Wprowadzanie zmiennych do funkcji
+RownanieKwadratowe(float(input("Podaj a: ")), float(input("Podaj b: ")), float(input("Podaj c: ")))           #Wprowadzanie zmiennych do funkcji
 
 #Zad9
-def kalkulator(x,y):
-    a = int(x)              #Zamiania str na int
-    b = int(y)              #Zamiania str na int
-
+def kalkulator(a,b):
     #Obliczenia
     dodawanie = a + b
     odejmowanie = a - b
@@ -162,13 +152,15 @@ def kalkulator(x,y):
     print (f"Wyniki:\n Dodawanie: {dodawanie}\n Odejmowanie: {odejmowanie}\n Mnożenie: {mnozenie}\n Dzielenie: {dzielenie}\n Potęgowanie: {potegowanie}")
 
 
-kalkulator(input("Podaj pierwszą liczbę: "),input("Podaj drugą liczbę: "))     #Wprowadzenie zmiennych do funkcji kalkulator
+kalkulator(float(input("Podaj pierwszą liczbę: ")), float(input("Podaj drugą liczbę: ")))     #Wprowadzenie zmiennych do funkcji kalkulator
 
 '''
+Podaj pierwszą liczbę: 5
+Podaj drugą liczbę: 6
 Wyniki:
- Dodawanie: 11
- Odejmowanie: -1
- Mnożenie: 30
+ Dodawanie: 11.0
+ Odejmowanie: -1.0
+ Mnożenie: 30.0
  Dzielenie: 0.83
- Potęgowanie: 15625
+ Potęgowanie: 15625.0
  '''
