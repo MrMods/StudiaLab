@@ -181,4 +181,4 @@ def Ostatnie():
     lancuch3 = x[0:int(len(y)/2)]
     print(lancuch3)
 
-Ostatnie()
+##Ostatnie()
