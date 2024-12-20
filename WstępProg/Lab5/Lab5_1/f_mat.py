@@ -1,4 +1,4 @@
-def kwadrat(x):
+def kwadrat(x):         #Tworzenie funkcji i obliczenia
     return x * x
 def szescian(x):
     return x * x * x
