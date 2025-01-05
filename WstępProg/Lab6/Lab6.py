@@ -69,6 +69,5 @@ def LosowaMacierz():
     print(f"Maksymalna liczba w macierzy: {macierz.max()}")
 
     index = macierz.argmin(axis = 1)
-    print(macierz[index,0])
 
 LosowaMacierz()
