@@ -1,0 +1,6 @@
+1. Podaj zmienne a,b,c
+2. Oblicz delte
+3. Sprawdź czy delta jest większa od 0
+4.Jeśli tak to oblicz x1,x2
+5.Jeśli delta = 0 to olicz x
+6.Jeśli nie to brak rozwiązań
