@@ -1,3 +1,4 @@
+dane a!=0 oraz liczby rzecz
 1. Podaj zmienne a,b,c
 2. Oblicz delte
 3. Sprawdź czy delta jest większa od 0
